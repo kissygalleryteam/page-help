@@ -1,0 +1,1 @@
+KISSY.config("modules",{"kg/page-help/1.0.0/index":{requires:["node","base"]}});
