@@ -83,16 +83,16 @@ S.augment(PageHelp, Event.Target, {
                 //     }
                 // }, 100);
 
-                S.later(function(){
-                    if(!window.favHelpFavPopupRun){
-                        window.favHelpFavPopupRun = false;
-                        window.yindaoPopup && window.yindaoPopup.hide();
-                    }
-                    if(!window.favHelpCornucopiaPopupRun){
-                        window.favHelpCornucopiaPopupRun = false;
-                        window.yindaoCornucopiaPopup && window.yindaoCornucopiaPopup.hide();
-                    }
-                },100);
+                // S.later(function(){
+                //     if(!window.favHelpFavPopupRun){
+                //         window.favHelpFavPopupRun = false;
+                //         window.yindaoPopup && window.yindaoPopup.hide();
+                //     }
+                //     if(!window.favHelpCornucopiaPopupRun){
+                //         window.favHelpCornucopiaPopupRun = false;
+                //         window.yindaoCornucopiaPopup && window.yindaoCornucopiaPopup.hide();
+                //     }
+                // },100);
                 var hook = $(e.target).attr('data-hook');
                 if(hook){
                     window.favHelpPublicPopup && window.favHelpPublicPopup.hide();

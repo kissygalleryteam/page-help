@@ -121,7 +121,6 @@
 <div class="p2">功能提示说明</div>
 <div class="p3">一个方便的交互式帮助手册</div>
 <div class="p4">选区的动画移动效果</div>
-<div class="p5">支持自定义效果</div>
 
 
 <!-- 这里是您业务中的示例使用场景 -->
@@ -141,6 +140,10 @@ window.helpArr=[
         hook: '.p2',
         q: '什么是功能提示说明？',
         a: '这就是功能提示说明，看，直观吧～'
+    },{
+        hook: '.p4',
+        q: '移动选框的动画',
+        a: '动画会自动适应所选元素的宽高～'
     },{
         hook: '',
         q: '我自定义的效果在哪？',
@@ -166,10 +169,20 @@ window.helpArr=[
         });
     }
 
-    S.use('kg/page-help/1.0.0/index', function (S, PageHelp) {
+    S.use('node,kg/page-help/1.0.0/index', function (S, Node, PageHelp) {
+
+        var $=Node.all;
+
+        window.favHelpCornucopiaShow = function(){
+            $('.J_FH1').height('100%');
+            window.favHelpPopup && window.favHelpPopup.hide();
+            alert('这里可以执行你的任何脚本');
+        }
+        
         new PageHelp({
             helpArr: window.helpArr
         });
+
     })
 </script>
 </body>
